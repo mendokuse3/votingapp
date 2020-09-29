@@ -3,7 +3,13 @@ import React,{useState} from 'react';
 
 function Questions(props) {
 const [userScore, setUserScore] = useState(0); 
+const [userCandi, setUserCandi] = useState(' '); 
 
+    const trumpScore = -7;
+    const harrisScore = -2;
+    const penceScore =0;
+    const bidenScore =5;
+    
 
     const handleClickYes = () => {
         setUserScore(userScore + 1) 
@@ -14,8 +20,15 @@ const [userScore, setUserScore] = useState(0);
     const handleClickMaybe = () => {
         setUserScore(userScore) 
      }     
+     const handleClick = () =>{
+         if(userScore>=trumpScore && userScore<harrisScore){
+            setUserCandi('trump')
+        }
+     }
+     console.log(userCandi);
      console.log(userScore);
 
+    
     return (
         <div>
             <div>
@@ -80,7 +93,7 @@ const [userScore, setUserScore] = useState(0);
                     
 
                 </ul>
-
+            <button onClick={handleClick}>Who's my Candi?</button>
             </div>
 
 
