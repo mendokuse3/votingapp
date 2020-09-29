@@ -1,57 +1,90 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-iuofwji
 
 function Questions(props) {
+const [userScore, setUserScore] = useState(0); 
+
+
+    const handleClickYes = () => {
+        setUserScore(userScore + 1) 
+    }
+    const handleClickNo = () => {
+        setUserScore(userScore - 1) 
+     }
+    const handleClickMaybe = () => {
+        setUserScore(userScore) 
+     }     
+     console.log(userScore);
+
     return (
         <div>
             <div>
                 <ul>
                     <li>
-                        Question1 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
+                        Question1
+                        
+                    <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
                     </li>
                     <li>
-                        Question2 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
+                        Question2
+                    <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
+
                     </li>
                     <li>
-                        Question3 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
+                        Question3
+                    <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
                     </li>
                     <li>
-                        Question4 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
+                        Question4
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
                     </li>
+
                     <li>
-                        Question5 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
+                        Question5
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
+
                     </li>
+
                     <li>
-                        Question6 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
+                        Question6
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
                     </li>
-                    <li>
-                        Question7 
-                        <input type='submit'>yes</input>
-                        <input type='submit'>no</input>
-                        <input type='submit'>neutral</input>
-                    </li>
+                    
+
+                        <li>
+                            Question7
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+
+                        </li>
+                    
+
                 </ul>
+
             </div>
-        </div>
+
+
+            </div>
     );
 }
 
