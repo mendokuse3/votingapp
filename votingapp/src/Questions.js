@@ -1,6 +1,5 @@
 import React from 'react';
 
-iuofwji
 
 function Questions(props) {
     return (
