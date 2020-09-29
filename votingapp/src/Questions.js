@@ -7,8 +7,8 @@ const [userCandi, setUserCandi] = useState(' ');
 
     const trumpScore = -7;
     const harrisScore = -2;
-    const penceScore =0;
-    const bidenScore =5;
+    // const penceScore = 0;
+    // const bidenScore = 5;
     
 
     const handleClickYes = () => {
@@ -16,17 +16,15 @@ const [userCandi, setUserCandi] = useState(' ');
     }
     const handleClickNo = () => {
         setUserScore(userScore - 1) 
-     }
+    }
     const handleClickMaybe = () => {
         setUserScore(userScore) 
-     }     
+    }     
      const handleClick = () =>{
          if(userScore>=trumpScore && userScore<harrisScore){
             setUserCandi('trump')
         }
-     }
-     console.log(userCandi);
-     console.log(userScore);
+    }
 
     
     return (
@@ -36,14 +34,14 @@ const [userCandi, setUserCandi] = useState(' ');
                     <li>
                         Question1
                         
-                    <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickYes}>Yes</button>
                         <button onClick={handleClickNo}>No</button>
                         <button onClick={handleClickMaybe}>Maybe</button>
 
                     </li>
                     <li>
                         Question2
-                    <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickYes}>Yes</button>
                         <button onClick={handleClickNo}>No</button>
                         <button onClick={handleClickMaybe}>Maybe</button>
 
@@ -51,7 +49,7 @@ const [userCandi, setUserCandi] = useState(' ');
                     </li>
                     <li>
                         Question3
-                    <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickYes}>Yes</button>
                         <button onClick={handleClickNo}>No</button>
 
                         <button onClick={handleClickMaybe}>Maybe</button>
