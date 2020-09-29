@@ -8,15 +8,15 @@ import StateInfo from './StateInfo';
 
 class App extends Component {
   state = {
-    showStateInfo: false,
-    stateURL: ''
+    showState: false,
+    stateInfo: {}
 
   }
 
-  toggleStateInfo = (stateLink) => {
+  toggleState = (data) => {
     this.setState({
-      showStateInfo: true,
-      stateURL: stateLink
+      showState: true,
+      stateInfo: data
     })
   }
 
@@ -24,8 +24,8 @@ class App extends Component {
     return (
       <div>
         <Questions/>
-        <Register toggleStateInfo={this.toggleStateInfo} />
-        {this.state.showStateInfo && <StateInfo stateURL={this.state.stateURL} />}
+        <Register toggleState={this.toggleState} />
+        {this.state.showState && <StateInfo stateInfo={this.state.stateInfo} />}
       </div>
     );
   }
