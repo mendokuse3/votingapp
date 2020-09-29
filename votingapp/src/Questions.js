@@ -7,8 +7,8 @@ const [userCandi, setUserCandi] = useState(' ');
 
     const trumpScore = -7;
     const harrisScore = -2;
-    const penceScore = 0;
-    const bidenScore = 5;
+    // const penceScore = 0;
+    // const bidenScore = 5;
     
 
     const handleClickYes = () => {
