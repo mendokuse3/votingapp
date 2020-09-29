@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Dropdown, FormControl } from 'react-bootstrap';
+import stateData from './stateData';
 
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -43,13 +44,6 @@ const CustomMenu = React.forwardRef(
 	}
 );
 
-const stateData = [
-	{url: 'https://www.google.com',
-	name: 'Alaska'
-	},
-	{url: 'https://www.yahoo.com',
-	name: 'cali'}
-]
 
 function Register(props) {
 	// const [redirectLink, setRedirectLink] = useState('');
