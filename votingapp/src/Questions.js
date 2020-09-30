@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import Carousel from 'react-bootstrap/Carousel'
 
 
 function Questions(props) {
@@ -26,11 +27,138 @@ const [userCandi, setUserCandi] = useState(' ');
         }
     }
 
-    
+    // can create an array with all the questions and map through it, returning carousel.item's for cleaner code
     return (
         <div>
             <div>
-                <ul>
+            <Carousel interval={null} >
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="First slide"
+                    />
+                    <Carousel.Caption>
+                    <h3>First Question</h3>
+                    <button onClick={handleClickYes}>Yes</button>
+                    <button onClick={handleClickNo}>No</button>
+                    <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+                {/* <ul>
                     <li>
                         Question1
                         
@@ -90,7 +218,7 @@ const [userCandi, setUserCandi] = useState(' ');
                         </li>
                     
 
-                </ul>
+                </ul> */}
             <button onClick={handleClick}>Who's my Candi?</button>
             </div>
 
