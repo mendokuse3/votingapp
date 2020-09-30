@@ -39,10 +39,10 @@ const [userCandi, setUserCandi] = useState(' ');
                     alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>First Question</h3>
-                    <button onClick={handleClickYes}>Yes</button>
-                    <button onClick={handleClickNo}>No</button>
-                    <button onClick={handleClickMaybe}>Maybe</button>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
