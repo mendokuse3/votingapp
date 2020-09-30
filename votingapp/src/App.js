@@ -4,6 +4,8 @@ import Questions from './questions/Questions';
 // import About from './About';
 import Register from './Register';
 import StateInfo from './StateInfo';
+import Home from './Home';
+
 
 
 class App extends Component {
@@ -23,9 +25,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Questions/>
-        <Register toggleState={this.toggleState} />
-        {this.state.showState && <StateInfo stateInfo={this.state.stateInfo} />}
+        {/* <Questions/> */}
+        {/* <Register toggleState={this.toggleState} /> */}
+        {/* {this.state.showState && <StateInfo stateInfo={this.state.stateInfo} />} */}
+        <Home/>
       </div>
     );
   }
