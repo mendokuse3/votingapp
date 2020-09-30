@@ -47,28 +47,27 @@ const CustomMenu = React.forwardRef(
 
 
 function Register(props) {
-	const [placeholder, setPlaceholder] = useState('')
-	const goToLink = (data) => {
+	const passStateData = (data) => {
 		props.toggleState(data);
 	}
     return (
 			<div>
-				{/* <DropdownButton id="dropdown-basic-button" title="Dropdown button" className='scrollable'>
+				<DropdownButton id="dropdown-basic-button" title="Dropdown button" >
 					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
 					{stateData.map((st, i) => {
 						return (
-							<Dropdown.Item key={i} onClick={() => goToLink(st)}>{st.name}</Dropdown.Item>
+							<Dropdown.Item key={i} onClick={() => passStateData(st)}>{st.name}</Dropdown.Item>
 						)
 					})}
-				</DropdownButton> */}
-					<select className='select-css'>
+				</DropdownButton>
+					{/* <select className='select-css'>
 						<option>Large select</option>
 						{stateData.map((st, i) => {
 							return (
-								<option key={i} onClick={() => goToLink(st)}>{st.name}</option>
+								<option key={i} onClick={() => passStateData(st)}>{st.name}</option>
 							)
 						})}
-					</select>
+					</select> */}
 					{/* <div class="scrollable">
 					<select size="6" >
 						<option value="1" selected>option 1 The Long Option</option>
