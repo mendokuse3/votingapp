@@ -39,6 +39,10 @@ const questions = [
         title:'Marijuana & Cannabis Legalization',
         question:'I believe in decriminalizing marijuana. Smoke weed everyday.',
     },
+    {
+        title: "Submit your answers?",
+        question: null
+    }
 ]
 
 export default questions;
