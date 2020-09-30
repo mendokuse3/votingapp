@@ -63,10 +63,33 @@ class Questions extends React.Component {
 	}
 	
 	componentDidUpdate(){
-		if(this.state.isActive === 10){
+		if(this.state.isActive === 0){
+			$('.carousel-control-prev').off();
+			$('.carousel-control-prev-icon').css('display', 'none');
+		} else if(this.state.isActive === 10){
 			$('.carousel-control-next').off();
 			$('.carousel-control-next-icon').css('display', 'none');
+		} else {
+			$('.carousel-control-prev').off();
+			$('.carousel-control-next').off();
+			$('.carousel-control-prev-icon').css('display', 'inline-block');
+			$('.carousel-control-next-icon').css('display', 'inline-block');
+			$('.carousel-control-next').on('click', () => {
+				if(this.state.isActive >= 0 && this.state.isActive < 10){
+					this.setState({isActive: this.state.isActive + 1})
+				} else {
+					this.setState({isActive: 0})
+				}
+			})
+			$('.carousel-control-prev').on('click', () => {
+				if(this.state.isActive > 0 && this.state.isActive <= 10){
+					this.setState({isActive: this.state.isActive - 1})
+				} else {
+					this.setState({isActive: 10})
+				}
+			})
 		}
+
 	}
 
 	// can create an array with all the questions and map through it, returning carousel.item's for cleaner code
