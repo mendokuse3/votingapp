@@ -1,33 +1,34 @@
-import React,{ useState, useRef } from 'react';
+import React,{ useState } from 'react';
 import {Carousel, Button, ButtonGroup} from 'react-bootstrap'
 function Questions(props) {
-    let btnRef = useRef()
     const [userScore, setUserScore] = useState(0); 
     const [userCandi, setUserCandi] = useState(' '); 
+    const [yesBTN, setYesBTN] = useState(false)
+    const [noBTN, setNoBTN] = useState(false)
+    const [maybeBTN, setMaybeBTN] = useState(false)
 
     const trumpScore = -9.5;
     const harrisScore = 9.5;
     const penceScore = -10;
     const bidenScore = 7;
-    console.log(btnRef)
     
-const handleClickYes = (e) => {
-    setUserScore(userScore + 1)
-    if(btnRef.current){
-btnRef.current.setAttribute("disabled", "disabled");
-}
-}
-const handleClickNo = () => {
-    setUserScore(userScore - 1)
-    if (btnRef.current) {
-			btnRef.current.setAttribute('disabled', 'disabled');
-		} 
+    const handleClickYes = (e) => {
+        setUserScore(userScore + 1)
+        setNoBTN(false)
+        setMaybeBTN(false)
+        setYesBTN(true)
+    }
+    const handleClickNo = () => {
+        setUserScore(userScore - 1)
+        setMaybeBTN(false)
+        setYesBTN(false)
+        setNoBTN(true)
     }
     const handleClickMaybe = () => {
         setUserScore(userScore)
-        if (btnRef.current) {
-					btnRef.current.setAttribute('disabled', 'disabled');
-				} 
+        setNoBTN(false)
+        setYesBTN(false)
+        setMaybeBTN(true)
     }
 
      const handleClick = () =>{
@@ -41,8 +42,6 @@ const handleClickNo = () => {
             setUserCandi('Harris')
         }
     }
-    console.log(userCandi)
-    console.log(userScore)
 
     // can create an array with all the questions and map through it, returning carousel.item's for cleaner code
     return (
@@ -59,13 +58,13 @@ const handleClickNo = () => {
 								<h3>First Question</h3>
                                 <ButtonGroup>
 
-								<Button onClick={handleClickYes} ref={btnRef}>
+								<Button onClick={handleClickYes} disabled={yesBTN ? true : false}>
 									Yes
 								</Button>
-								<Button onClick={handleClickNo} ref={btnRef}>
+								<Button onClick={handleClickNo} disabled={noBTN ? true : false}>
 									No
 								</Button>
-								<Button onClick={handleClickMaybe} ref={btnRef}>
+								<Button onClick={handleClickMaybe} disabled={maybeBTN ? true : false}>
 									Maybe
 								</Button>
                                 </ButtonGroup>
