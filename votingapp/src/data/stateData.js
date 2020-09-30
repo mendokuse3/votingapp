@@ -93,8 +93,7 @@ const stateData = [
 	},
 	{
 		name: 'Georgia',
-		url:
-			'https://registertovote.sos.ga.gov/GAOLVR/welcometoga.do#no-back-button',
+		url: 'https://registertovote.sos.ga.gov/GAOLVR/welcometoga.do#no-back-button',
 		online: 'Monday, October 5, 2020',
 		mailIn: 'Monday, October 5, 2020',
 		inPerson: 'Monday, October 5, 2020',
@@ -118,8 +117,7 @@ const stateData = [
 	},
 	{
 		name: 'Idaho',
-		url:
-			'https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ApplicationInstructions.aspx?ref=voteusa',
+		url: 'https://elections.sos.idaho.gov/ElectionLink/ElectionLink/ApplicationInstructions.aspx?ref=voteusa',
 		online: 'Friday, October 9, 2020',
 		mailIn: 'Must be received by Friday, October 9, 2020',
 		inPerson: 'Tuesday, November 3, 2020',
@@ -176,8 +174,7 @@ const stateData = [
 	},
 	{
 		name: 'Maine',
-		url:
-			'https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html?ref=voteusa',
+		url: 'https://www.maine.gov/sos/cec/elec/voter-info/voterguide.html?ref=voteusa',
 		online: null,
 		mailIn: 'Must be received by Tuesday, October 13, 2020',
 		inPerson: 'Tuesday, November 3, 2020',
@@ -193,8 +190,7 @@ const stateData = [
 	},
 	{
 		name: 'Massachusetts',
-		url:
-			'https://www.sec.state.ma.us/OVR/Pages/CheckEligibility.aspx?&Action=Register',
+		url: 'https://www.sec.state.ma.us/OVR/Pages/CheckEligibility.aspx?&Action=Register',
 		online: 'Saturday, October 24, 2020',
 		mailIn: 'Must be postmarked by Saturday, October 24, 2020',
 		inPerson: 'Saturday, October 24, 2020',

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {DropdownButton, Dropdown, FormControl } from 'react-bootstrap';
-import stateData from './stateData';
+import stateData from './data/stateData';
 import './CSS/Register.css'
 
 
