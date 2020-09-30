@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {DropdownButton, Dropdown, FormControl } from 'react-bootstrap';
 import stateData from './data/stateData';
-import './CSS/Register.css'
+// import './CSS/Register.css'
 
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -52,14 +52,14 @@ function Register(props) {
 	}
     return (
 			<div>
-				<DropdownButton id="dropdown-basic-button" title="Dropdown button" >
-					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+				{/* <DropdownButton id="dropdown-basic-button" title="Select Your State" >
+					<Dropdown.Item href="#/action-1">Select Your State</Dropdown.Item>
 					{stateData.map((st, i) => {
 						return (
 							<Dropdown.Item key={i} onClick={() => passStateData(st)}>{st.name}</Dropdown.Item>
 						)
 					})}
-				</DropdownButton>
+				</DropdownButton> */}
 					{/* <select className='select-css'>
 						<option>Large select</option>
 						{stateData.map((st, i) => {
@@ -68,16 +68,21 @@ function Register(props) {
 							)
 						})}
 					</select> */}
-					{/* <div class="scrollable">
-					<select size="6" >
-						<option value="1" selected>option 1 The Long Option</option>
+					<div className="form-control">
+					<select >
+						{stateData.map((st, i) => {
+							return (
+								<option value={st.name} key={i} onClick={() => passStateData(st)}>{st.name}</option>
+							)
+						})}
+						{/* <option value="1" selected>option 1 The Long Option</option>
 						<option value="2">option 2</option>
 						<option value="3">option 3</option>
 						<option value="4">option 4</option>
 						<option value="5">option 5 Another Longer than the Long Option ;)</option>
-						<option value="6">option 6</option>
+						<option value="6">option 6</option> */}
 					</select>
-					</div> */}
+					</div>
 			</div>
 		);
 }

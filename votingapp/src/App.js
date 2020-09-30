@@ -10,7 +10,6 @@ class App extends Component {
   state = {
     showState: false,
     stateInfo: {}
-
   }
 
   toggleState = (data) => {
