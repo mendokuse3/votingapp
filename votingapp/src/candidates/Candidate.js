@@ -5,13 +5,8 @@ function Candidate(props) {
         <div>
             <h2>{props.data.name}</h2>
             <img src={props.data.img} alt='asldjfdf'/>
-            <ul>
-                {props.data.policies.map((policy) => {
-                    return (
-                        <li>{policy || 'this is a policy'}</li>
-                    )
-                })}
-            </ul>
+            <p>{props.data.blurb}</p>
+            <a href={props.data.website}>Go To Their Website</a>
         </div>
     );
 }

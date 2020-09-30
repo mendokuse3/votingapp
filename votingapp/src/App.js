@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Questions from './questions/Questions';
-// import Candidates from './candidates/Candidates';
+import Candidates from './candidates/Candidates';
 // import About from './About';
 import Register from './Register';
 import StateInfo from './StateInfo';
@@ -26,6 +26,7 @@ class App extends Component {
         <Questions/>
         <Register toggleState={this.toggleState} />
         {this.state.showState && <StateInfo stateInfo={this.state.stateInfo} />}
+        <Candidates />
       </div>
     );
   }
