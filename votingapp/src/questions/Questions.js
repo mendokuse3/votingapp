@@ -12,7 +12,8 @@ class Questions extends React.Component {
 		noBTN: false,
 		maybeBTN: false,
 		isActive: 0,
-		submit: false
+		submit: false,
+		matchScore:0,
 	}
 	
 	setUserScore = (action) => {
@@ -30,16 +31,27 @@ class Questions extends React.Component {
 	}
 
     handleClick = () =>{
-         if(this.state.userScore>= this.penceScore && this.state.userScore< this.trumpScore){
-            this.setState({userCandi: 'Pence'})
-        } else if (this.state.userScore >= this.trumpScore && this.state.userScore < 1.25) {
-            this.setState({userCandi: 'Trump'})
-        } else if (this.state.userScore>=1.25 && this.state.userScore<= this.bidenScore) {
-            this.setState({userCandi: 'Biden'})
+		let matchScore =0
+         if(this.state.userScore>= this.penceScore && this.state.userScore< -9.75){
+			this.setState({userCandi: 'Pence'})
+			matchScore= Math.floor(this.state.userScore/this.penceScore)*100
+			this.setState({matchScore:matchScore})
+			
+        } else if (this.state.userScore >= -9.75 && this.state.userScore < -1.5) {
+			this.setState({userCandi: 'Trump'})
+			matchScore= Math.floor(this.state.userScore/this.trumpScore)*100
+			this.setState({matchScore:matchScore})
+        } else if (this.state.userScore>=-1.5 && this.state.userScore<8) {
+			this.setState({userCandi: 'Biden'})
+			matchScore= Math.floor(this.state.userScore/this.bidenScore)*100
+			this.setState({matchScore:matchScore})
         } else {
-            this.setState({userCandi: 'Harris'})
+			this.setState({userCandi: 'Harris'})
+			matchScore= Math.floor(this.state.userScore/this.harrisScore)*100
+			this.setState({matchScore:matchScore})
         }
 	}
+
 
 	componentDidMount(){
 		$('.carousel-control-next').on('click', () => {
@@ -97,7 +109,7 @@ class Questions extends React.Component {
 		const trumpScore = -9.5;
 		const harrisScore = 9.5;
 		const penceScore = -10;
-		const bidenScore = 7;
+		const bidenScore = 6.5;
     return (
 			<div>
 				<div>
