@@ -90,10 +90,18 @@ const stateData = [
     {
         name: 'Georgia',
         url: 'https://registertovote.sos.ga.gov/GAOLVR/welcometoga.do#no-back-button',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Monday, October 5, 2020',
+        mailIn: 'Monday, October 5, 2020',
+        inPerson: 'Monday, October 5, 2020',
+        general: 'Tuesday, November 3, 2020'
+    },
+    {
+        name: 'Guam',
+        url: 'https://gec.guam.gov/register/?ref=voteusa',
+        online: 'Tuesday, October 13, 2020',
+        mailIn: 'Friday, October 23, 2020',
+        inPerson: 'Friday, October 23, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Hawaii',
