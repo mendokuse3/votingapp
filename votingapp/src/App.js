@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Questions from './Questions';
-// import Candidates from './Candidates';
+import Questions from './questions/Questions';
+// import Candidates from './candidates/Candidates';
 // import About from './About';
 import Register from './Register';
 import StateInfo from './StateInfo';
