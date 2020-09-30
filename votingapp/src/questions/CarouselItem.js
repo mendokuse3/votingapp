@@ -35,18 +35,22 @@ function CarouselItem(props) {
             <Carousel.Caption>
                 <h3>{props.data.title}</h3>
                 <p>{props.data.question}</p>
-                <ButtonGroup>
-
-                <Button onClick={handleClickYes} disabled={yesBTN ? true : false}>
-                    Yes
-                </Button>
-                <Button onClick={handleClickNo} disabled={noBTN ? true : false}>
-                    No
-                </Button>
-                <Button onClick={handleClickMaybe} disabled={maybeBTN ? true : false}>
-                    Maybe
-                </Button>
-                </ButtonGroup>
+                {props.data.question && 
+                    <ButtonGroup>
+                        <Button onClick={handleClickYes} disabled={yesBTN ? true : false}>
+                            Yes
+                        </Button>
+                        <Button onClick={handleClickNo} disabled={noBTN ? true : false}>
+                            No
+                        </Button>
+                        <Button onClick={handleClickMaybe} disabled={maybeBTN ? true : false}>
+                            Maybe
+                        </Button>
+                    </ButtonGroup>
+                }
+                {!props.data.question && 
+                    <Button>Submit</Button>
+                }
             </Carousel.Caption>
         </Carousel.Item>
         
