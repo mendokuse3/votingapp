@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {Dropdown, FormControl } from 'react-bootstrap';
+import {DropdownButton, Dropdown, FormControl } from 'react-bootstrap';
 import stateData from './stateData';
+import './CSS/Register.css'
 
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -46,26 +47,38 @@ const CustomMenu = React.forwardRef(
 
 
 function Register(props) {
+	const [placeholder, setPlaceholder] = useState('')
 	const goToLink = (data) => {
 		props.toggleState(data);
 	}
     return (
 			<div>
-				<Dropdown>
-					<Dropdown.Toggle as={CustomToggle} id='dropdown-custom-components'>
-						Select a state
-					</Dropdown.Toggle>
-
-					<Dropdown.Menu as={CustomMenu}>
+				{/* <DropdownButton id="dropdown-basic-button" title="Dropdown button" className='scrollable'>
+					<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+					{stateData.map((st, i) => {
+						return (
+							<Dropdown.Item key={i} onClick={() => goToLink(st)}>{st.name}</Dropdown.Item>
+						)
+					})}
+				</DropdownButton> */}
+					<select className='select-css'>
+						<option>Large select</option>
 						{stateData.map((st, i) => {
 							return (
-								<Dropdown.Item key={i} onClick={() => goToLink(st)}>{st.name}</Dropdown.Item>
+								<option key={i} onClick={() => goToLink(st)}>{st.name}</option>
 							)
 						})}
-						{/* <Dropdown.Item onClick={() => goToLink('http://www.google.com')} eventKey='1'>Alabama</Dropdown.Item> */}
-
-					</Dropdown.Menu>
-				</Dropdown>
+					</select>
+					{/* <div class="scrollable">
+					<select size="6" >
+						<option value="1" selected>option 1 The Long Option</option>
+						<option value="2">option 2</option>
+						<option value="3">option 3</option>
+						<option value="4">option 4</option>
+						<option value="5">option 5 Another Longer than the Long Option ;)</option>
+						<option value="6">option 6</option>
+					</select>
+					</div> */}
 			</div>
 		);
 }

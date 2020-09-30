@@ -39,20 +39,6 @@ const [userCandi, setUserCandi] = useState(' ');
                     alt="First slide"
                     />
                     <Carousel.Caption>
-                    <h3>First Question</h3>
-                    <button onClick={handleClickYes}>Yes</button>
-                    <button onClick={handleClickNo}>No</button>
-                    <button onClick={handleClickMaybe}>Maybe</button>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                    className="d-block w-100"
-                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                    alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
                         <h3>First Question</h3>
                         <button onClick={handleClickYes}>Yes</button>
                         <button onClick={handleClickNo}>No</button>
@@ -155,6 +141,30 @@ const [userCandi, setUserCandi] = useState(' ');
                         <button onClick={handleClickYes}>Yes</button>
                         <button onClick={handleClickNo}>No</button>
                         <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>First Question</h3>
+                        <button onClick={handleClickYes}>Yes</button>
+                        <button onClick={handleClickNo}>No</button>
+                        <button onClick={handleClickMaybe}>Maybe</button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                    alt="Third slide"
+                    />
+                    <Carousel.Caption>
+                        <button onClick={handleClick}>Who's my Candi?</button>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -219,7 +229,6 @@ const [userCandi, setUserCandi] = useState(' ');
                     
 
                 </ul> */}
-            <button onClick={handleClick}>Who's my Candi?</button>
             </div>
 
 
