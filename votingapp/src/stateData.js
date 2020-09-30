@@ -106,10 +106,10 @@ const stateData = [
     {
         name: 'Hawaii',
         url: 'https://olvr.hawaii.gov/register.aspx',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Monday, October 5, 2020',
+        mailIn: 'Monday, October 5, 2020',
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Idaho',
@@ -242,186 +242,202 @@ const stateData = [
     {
         name: 'Nevada',
         url: 'https://www.registertovotenv.gov/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Thursday, October 29, 2020',
+        mailIn: 'Tuesday, October 6, 2020',
+        inPerson: 'Tuesday, October 6, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'New Hampshire',
         url: 'https://sos.nh.gov/elections/voters/register-to-vote/town-or-city-clerk-s-office/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: null,
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'New Jersey',
         url: 'https://voter.svrs.nj.gov/register',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: 'Tuesday, October 13, 2020',
+        inPerson: 'Tuesday, October 13, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'New Mexico',
         url: 'https://portal.sos.state.nm.us/OVR/(S(r52ixg1k5n1bltkptf5mthpk))/WebPages/DomesticApplication.aspx?AspxAutoDetectCookieSupport=1',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Tuesday, October 6, 2020',
+        mailIn: 'Tuesday, October 6, 2020',
+        inPerson: 'Saturday, October 31, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'New York',
         url: 'https://voterreg.dmv.ny.gov/MotorVoter/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Friday, October 9, 2020',
+        mailIn: 'Friday, October 9, 2020',
+        inPerson: 'Friday, October 9, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'North Carolina',
         url: 'https://payments.ncdot.gov/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Friday, October 9, 2020',
+        mailIn: 'Friday, October 9, 2020',
+        inPerson: 'Saturday, October 31, 2020',
+        general: 'Tuesday, November 3, 220'
     },
     {
         name: 'North Dakota',
         url: 'https://howto.vote/register/en/nd.html',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: null,
+        inPerson: null,
+        general: 'Tuesday, November 3, 2020'
+    },
+    {
+        name: 'Northern Mariana Islands',
+        url: 'https://www.votecnmi.gov.mp/?ref=voteusa',
+        online: null,
+        mailIn: null,
+        inPerson: 'Friday, September 4, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Ohio',
         url: 'https://howto.vote/register/en/nd.html',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Monday, October 5, 2020',
+        mailIn: 'Monday, October 5, 2020',
+        inPerson: 'Monday, October 5, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Oklahoma',
         url: 'https://www.ok.gov/elections/documents/Oklahoma%20Voter%20Registration%20Application%20form%20v4-20%20SEB%20web.pdf',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: 'Friday, October 9, 2020',
+        inPerson: 'Friday, October 9, 202',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Oregon',
         url: 'https://sos.oregon.gov/voting/Pages/registration.aspx?lang=en',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Tuesday, October 13, 2020',
+        mailIn: 'Tuesday, October 13, 2020',
+        inPerson: 'Tuesday, October 13, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Pennsylvania',
         url: 'https://www.pavoterservices.pa.gov/Pages/VoterRegistrationApplication.aspx',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Monday, October 19, 2020',
+        mailIn: 'Monday, October 19, 2020',
+        inPerson: 'Monday, October 19, 2020',
+        general: 'Tuesday, November 9, 2020'
     },
     {
         name: 'Rhode Island',
         url: 'https://vote.sos.ri.gov/Home/RegistertoVote?ActiveFlag=1',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Sunday, October 4, 2020',
+        mailIn: 'Sunday, October 4, 2020',
+        inPerson: 'Sunday, October 4, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'South Carolina',
         url: 'https://info.scvotes.sc.gov/eng/ovr/start.aspx',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Sunday, October 4, 2020',
+        mailIn: 'Monday, October 5, 2020',
+        inPerson: 'Friday, October 2, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'South Dakota',
         url: 'https://www.vote.org/register-to-vote/south-dakota/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: 'Monday, October 19, 2020',
+        inPerson: 'Monday, October 19, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Tennessee',
         url: 'https://ovr.govote.tn.gov/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Monday, October 5, 2020',
+        mailIn: 'Monday, October 5, 2020',
+        inPerson: 'Monday, October 5, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Texas',
         url: 'https://www.sos.state.tx.us/elections/forms/vr-with-receipt.pdf',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: 'Monday, October 5, 2020',
+        inPerson: 'Monday, October 5, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Utah',
         url: 'https://secure.utah.gov/voterreg/index.html',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Friday, October 23, 2020',
+        mailIn: 'Friday, October 23, 2020',
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
+    },
+    {
+        name: 'US Virgin Islands',
+        url: 'https://www.vivote.gov/voters/register-vote?ref=voteusa',
+        online: null,
+        mailIn: null,
+        inPerson: 'Sunday, October 4, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Vermont',
         url: 'https://olvr.vermont.gov/',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Friday, October 30, 2020',
+        mailIn: 'Friday, October 30, 2020',
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Virginia',
         url: 'https://vote.elections.virginia.gov/Registration/DmvLookup',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Tuesday, October 13, 2020',
+        mailIn: 'Tuesday, October 13, 2020',
+        inPerson: 'Tuesday, October 13, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Washington',
         url: 'https://olvr.votewa.gov/VoterIdentification.aspx',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Monday, October 13, 2020',
+        mailIn: 'Monday, October 26, 2020',
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'West Virginia',
         url: 'https://ovr.sos.wv.gov/Register/Landing#Qualifications',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Tuesday, October 13, 2020',
+        mailIn: 'Tuesday, October 13, 2020',
+        inPerson: 'Tuesday, October 13, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Wisconsin',
         url: 'https://myvote.wi.gov/en-us/RegisterToVote',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: 'Wednesday, October 14, 2020',
+        mailIn: 'Wednesday, October 14, 2020',
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
     },
     {
         name: 'Wyoming',
         url: 'https://sos.wyo.gov/Forms/Elections/General/VoterRegistrationForm.pdf',
-        online: '',
-        mailIn: '',
-        inPerson: '',
-        general: ''
+        online: null,
+        mailIn: 'Monday, October 19, 2020',
+        inPerson: 'Tuesday, November 3, 2020',
+        general: 'Tuesday, November 3, 2020'
     }
 ]
 
