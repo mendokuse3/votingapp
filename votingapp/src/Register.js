@@ -78,9 +78,9 @@ function Register(props) {
 					})}
 				</DropdownButton>
 				{showState && <StateInfo stateInfo={data} />}
-				<footer className='reg-img'>
-					<img src='https://user-images.githubusercontent.com/62581000/94859631-d5e60780-0402-11eb-90a9-4a537554964b.png' />
-				</footer>
+				{/* <footer className='reg-img'> */}
+					<img className='reg-img' src='https://user-images.githubusercontent.com/62581000/94859631-d5e60780-0402-11eb-90a9-4a537554964b.png' />
+				{/* </footer> */}
 			</div>
 		);
 }

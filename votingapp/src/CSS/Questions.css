@@ -71,5 +71,6 @@
     padding: 5%!important;
     font-size: 25px!important;
     border-radius: 10px!important;
-    background: radial-gradient(red, transparent);
+    background-color: red!important;
+    border-color: red!important;
 }
