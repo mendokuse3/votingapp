@@ -13,7 +13,7 @@ class App extends Component {
     showState: false,
     stateInfo: {},
     showHome: false,
-    showQuestions: false,
+    showQuestions: true,
     showRegister: true,
     showCandidates: false,
     showDashboards: false
