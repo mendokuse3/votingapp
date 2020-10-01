@@ -43,11 +43,12 @@ class App extends Component {
     clearTimeout(this.myVar)
   }
 
-  goToCandidate = (index) => {
+  goToCandidate = (index, TF) => {
     this.setFalse();
     this.setState({
       showCandidates: true,
-      selectedCandidate: index
+      selectedCandidate: index,
+      alreadyMatched: TF
     })
   }
 
@@ -59,6 +60,13 @@ class App extends Component {
   }
   
   goToQuestions = () => {
+    this.setFalse();
+    this.setState({
+      showQuestions: true
+    })
+  }
+
+  goBackToMatch = () => {
     this.setFalse();
     this.setState({
       showQuestions: true
@@ -81,8 +89,10 @@ class App extends Component {
         <Register toggleState={this.toggleState} goToDash={this.goToDash} />
         }
         {this.state.showCandidates &&
+
         <Candidates selectedCandidate={this.state.selectedCandidate} goToDash={this.goToDash} 
         goToQuestions={this.goToQuestions}/>
+
         }
       </div>
     );

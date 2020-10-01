@@ -53,6 +53,7 @@ function Register(props) {
 	const [showState, setShowState] = useState(false)
 	const [data, setData] = useState({})
 	const passStateData = (data, e) => {
+		setChosenState(data.name)
 		setShowState(true)
 		setData(data)
 	}
@@ -61,7 +62,6 @@ function Register(props) {
 				<Nav goToDash={props.goToDash} goBack={props.goToDash}/>
                 <h1>Voter Information</h1>
 				<DropdownButton id="dropdown-basic-button" title={chosenState} >
-					{/* <Dropdown.Item href="#/action-1">Select Your State</Dropdown.Item> */}
 					{stateData.map((st, i) => {
 						return (
 							<Dropdown.Item key={i} onClick={(e) => passStateData(st, e)}>{st.name}</Dropdown.Item>
