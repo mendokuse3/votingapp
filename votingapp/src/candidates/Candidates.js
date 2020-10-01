@@ -4,10 +4,10 @@ import candidateData from '../data/candidateData';
 import Nav from '../navbar/Nav';
 
 
-function Candidates({selectedCandidate, goToDash}) {
+function Candidates({selectedCandidate, goToDash, alreadyMatched, goBackToMatch}) {
     return (
         <div>
-            <Nav goToDash={goToDash} goBack={goToDash} />
+            <Nav goToDash={goToDash} goBack={alreadyMatched ? goBackToMatch : goToDash} />
             {candidateData.map((cand, i) => {
                 if(selectedCandidate == i){
                     return (

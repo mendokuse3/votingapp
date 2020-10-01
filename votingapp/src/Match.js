@@ -7,7 +7,7 @@ function Match(props) {
     const candidate = candidateData.find(c => c.name.includes(props.candidate) )
     console.log(props)
     const goToLink = () => {
-        props.goToCandidate(props.candidateIndex);
+        props.goToCandidate(props.candidateIndex, true);
     }
     return (
         <div className='matchPage'>
