@@ -5,8 +5,9 @@ import Candidates from './candidates/Candidates';
 import Register from './Register';
 import StateInfo from './StateInfo';
 import Home from './Home';
+import Dashboard from './Dashboard';
 
-
+// hello world
 
 class App extends Component {
   state = {
@@ -60,12 +61,7 @@ class App extends Component {
         <Home goToDash={this.goToDash}/>
         }
         {this.state.showDashboards &&
-        <>
-        <h1>I'm the dashboard</h1>
-        <button>Go To Questionaire</button>
-        <button>Go To Register to Vote</button>
-        <button>Go to Candidate Profiles</button>
-        </>
+        <Dashboard />
         }
         {this.state.showQuestions &&
         <Questions/>
