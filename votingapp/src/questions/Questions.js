@@ -5,6 +5,7 @@ import questions from '../data/questionsArray';
 import $ from 'jquery';
 import Nav from '../navbar/Nav';
 import Match from '../Match';
+import '../CSS/Questions.css';
 
 class Questions extends React.Component {
 	state = {
@@ -118,7 +119,7 @@ class Questions extends React.Component {
 
 	goBack = () => {
 		this.setState({
-			showMatch: false
+			showMatch: !this.state.showMatch
 		})
 	}
 
