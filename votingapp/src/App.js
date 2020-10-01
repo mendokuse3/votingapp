@@ -13,14 +13,12 @@ class App extends Component {
   state = {
     showState: false,
     stateInfo: {},
-    showHome: false,
+    showHome: true,
     showQuestions: false,
     showRegister: false,
     showCandidates: false,
     showDashboards: false,
-
     selectedCandidate: '',
-
   }
 
   toggleState = (data) => {
@@ -40,14 +38,14 @@ class App extends Component {
     })
   }
 
-  // componentDidMount(){
-  //   this.myVar = setTimeout(() => {
-  //     this.setFalse();
-  //     this.setState({
-  //       showDashboards: true
-  //     })
-  //   }, 5000)
-  // }
+  componentDidMount(){
+    this.myVar = setTimeout(() => {
+      this.setFalse();
+      this.setState({
+        showDashboards: true
+      })
+    }, 5000)
+  }
 
   goToDash = () => {
     this.setFalse();
@@ -82,10 +80,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* {this.state.showHome &&
+        {this.state.showHome &&
         <Home goToDash={this.goToDash}/>
-        } */}
-        <Match/>
+        }
         {this.state.showDashboards &&
         <Dashboard  setFalse={this.setFalse} goToDash={this.goToDash} goToCandidate={this.goToCandidate} goToMatch={this.goToMatch} goToRegister={this.goToRegister} goToQuestions={this.goToQuestions} />
         }
