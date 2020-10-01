@@ -7,7 +7,7 @@ import Nav from '../navbar/Nav';
 function Candidates({selectedCandidate, goToDash}) {
     return (
         <div>
-            <Nav goToDash={goToDash} />
+            <Nav goToDash={goToDash} goBack={goToDash} />
             {candidateData.map((cand, i) => {
                 if(selectedCandidate == i){
                     return (

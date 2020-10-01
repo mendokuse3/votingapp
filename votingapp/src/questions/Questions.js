@@ -118,10 +118,16 @@ class Questions extends React.Component {
 		})
 	}
 
+	goBack = () => {
+		this.setState({
+			showMatch: false
+		})
+	}
+
 	render(){
     return (
 			<div>
-				<Nav goToDash={this.props.goToDash}/>
+				<Nav goToDash={this.props.goToDash} goBack={this.state.showMatch ? this.goBack : this.props.goToDash}/>
 				{!this.state.showMatch &&
 				<div>
 					<Carousel interval={null} activeIndex={this.state.isActive}>
