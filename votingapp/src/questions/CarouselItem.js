@@ -49,7 +49,7 @@ function CarouselItem(props) {
                     </ButtonGroup>
                 }
                 {!props.data.question && 
-                    <Button>Submit</Button>
+                    <Button onClick={() => props.handleClick()}>Submit</Button>
                 }
             </Carousel.Caption>
         </Carousel.Item>

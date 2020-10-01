@@ -47,42 +47,21 @@ const CustomMenu = React.forwardRef(
 
 
 function Register(props) {
-	const passStateData = (data) => {
+	const [chosenState, setChosenState] = useState('Select Your State');
+	const passStateData = (data, e) => {
+		setChosenState(e.currentTarget.innerHTML)
 		props.toggleState(data);
 	}
     return (
 			<div>
-				{/* <DropdownButton id="dropdown-basic-button" title="Select Your State" >
-					<Dropdown.Item href="#/action-1">Select Your State</Dropdown.Item>
+				<DropdownButton id="dropdown-basic-button" title={chosenState} >
+					{/* <Dropdown.Item href="#/action-1">Select Your State</Dropdown.Item> */}
 					{stateData.map((st, i) => {
 						return (
-							<Dropdown.Item key={i} onClick={() => passStateData(st)}>{st.name}</Dropdown.Item>
+							<Dropdown.Item key={i} onClick={(e) => passStateData(st, e)}>{st.name}</Dropdown.Item>
 						)
 					})}
-				</DropdownButton> */}
-					{/* <select className='select-css'>
-						<option>Large select</option>
-						{stateData.map((st, i) => {
-							return (
-								<option key={i} onClick={() => passStateData(st)}>{st.name}</option>
-							)
-						})}
-					</select> */}
-					<div className="form-control">
-					<select >
-						{stateData.map((st, i) => {
-							return (
-								<option value={st.name} key={i} onClick={() => passStateData(st)}>{st.name}</option>
-							)
-						})}
-						{/* <option value="1" selected>option 1 The Long Option</option>
-						<option value="2">option 2</option>
-						<option value="3">option 3</option>
-						<option value="4">option 4</option>
-						<option value="5">option 5 Another Longer than the Long Option ;)</option>
-						<option value="6">option 6</option> */}
-					</select>
-					</div>
+				</DropdownButton>
 			</div>
 		);
 }
