@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {DropdownButton, Dropdown, FormControl } from 'react-bootstrap';
 import stateData from './data/stateData';
 // import './CSS/Register.css'
+import Nav from './navbar/Nav.js'
 
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -54,6 +55,7 @@ function Register(props) {
 	}
     return (
 			<div>
+				<Nav />
 				<DropdownButton id="dropdown-basic-button" title={chosenState} >
 					{/* <Dropdown.Item href="#/action-1">Select Your State</Dropdown.Item> */}
 					{stateData.map((st, i) => {
