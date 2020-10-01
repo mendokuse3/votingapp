@@ -1,3 +1,4 @@
+
 body,html{
     height: 100%;
     background-image: url('https://user-images.githubusercontent.com/65630204/94737748-5ee63b80-033c-11eb-804c-64c5d766c7f5.png');
@@ -11,6 +12,7 @@ body,html{
     height:100%;
 font-family: 'Avenir','Book';
 
+
 }
 .top{
     display:flex;
@@ -18,6 +20,7 @@ font-family: 'Avenir','Book';
 
 }
 .match{
+
     width:100%;
     
     text-align: center;
@@ -67,3 +70,4 @@ font-family: 'Avenir','Book';
     font-size: 30px;
 
 }
+

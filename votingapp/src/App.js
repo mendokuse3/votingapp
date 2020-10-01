@@ -8,7 +8,6 @@ import Home from './Home';
 import Dashboard from './Dashboard';
 import Match from './Match';
 
-// hello world
 
 class App extends Component {
   state = {
@@ -19,8 +18,9 @@ class App extends Component {
     showRegister: false,
     showCandidates: false,
     showDashboards: false,
-    showMatch: true,
-    selectedCandidate: ''
+
+    selectedCandidate: '',
+
   }
 
   toggleState = (data) => {
@@ -65,43 +65,41 @@ class App extends Component {
     })
   }
 
-  goToMatch = () => {
-    this.setFalse();
-    this.setState({
-      showMatch: true
-    })
-  }
-
   goToRegister = () => {
     this.setFalse();
     this.setState({
       showRegister: true
     })
   }
+  
+  goToQuestions = () => {
+    this.setFalse();
+    this.setState({
+      showQuestions: true
+    })
+  }
 
   render() {
     return (
       <div>
-        {this.state.showHome &&
+        {/* {this.state.showHome &&
         <Home goToDash={this.goToDash}/>
-        }
-        {this.state.showMatch && 
+        } */}
         <Match/>
-        }
         {this.state.showDashboards &&
-        <Dashboard  setFalse={this.setFalse} goToCandidate={this.goToCandidate} goToMatch={this.goToMatch} goToRegister={this.goToRegister}/>
+        <Dashboard  setFalse={this.setFalse} goToDash={this.goToDash} goToCandidate={this.goToCandidate} goToMatch={this.goToMatch} goToRegister={this.goToRegister} goToQuestions={this.goToQuestions} />
         }
         {this.state.showQuestions &&
-        <Questions/>
+        <Questions goToDash={this.goToDash} goToMatch={this.goToMatch} selectedCandidate={this.state.selectedCandidate}/>
         }
         {this.state.showRegister &&
         <>
-        <Register toggleState={this.toggleState} />
+        <Register toggleState={this.toggleState} goToDash={this.goToDash} />
         {this.state.showState && <StateInfo toggleState={this.toggleState} stateInfo={this.state.stateInfo} />}
         </>
         }
         {this.state.showCandidates &&
-        <Candidates selectedCandidate={this.state.selectedCandidate} />
+        <Candidates selectedCandidate={this.state.selectedCandidate} goToDash={this.goToDash} />
         }
       </div>
     );
