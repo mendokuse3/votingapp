@@ -3,13 +3,16 @@ import Candidate from './Candidate';
 import candidateData from '../data/candidateData';
 
 
-function Candidates(props) {
+function Candidates({selectedCandidate}) {
     return (
         <div>
             {candidateData.map((cand, i) => {
-                return (
+                if(selectedCandidate == i){
+                    return (
                     <Candidate key={i} data={cand} />
-                )
+                    )
+                }
+                return
             })}
         </div>
     );
