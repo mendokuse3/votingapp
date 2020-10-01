@@ -5,6 +5,10 @@ import candidateData from './data/candidateData';
 
 function Match(props) {
     const candidate = candidateData.find(c => c.name.includes(props.candidate) )
+    console.log(props)
+    const goToLink = () => {
+        props.goToCandidate(props.candidateIndex);
+    }
     return (
         <div className='matchPage'>
 
@@ -13,7 +17,7 @@ function Match(props) {
             <div className='percentDisplay'>{props.matchScore}%</div>
             <div className='name'>{candidate.name}</div>
             <div className='party'>{candidate.party}</div>
-            <button className='bottomProfileBtn'>View Profile</button>
+            <button onClick={() => goToLink()} className='bottomProfileBtn'>View Profile</button>
             
         </div>
     );
