@@ -1,15 +1,23 @@
 import React from 'react';
+import './CSS/StateInfo.css'
 
 function StateInfo({stateInfo}) {
     console.log(stateInfo)
     return (
-			<div>
-				<h3>{stateInfo.name}</h3>
-				<h4>Online Registration: {stateInfo.online}</h4>
-				<h4>Mail-in Registration: {stateInfo.mailIn}</h4>
-				<h4>In-Person Registration:  {stateInfo.inPerson}</h4>
-				<h4>General Election Day: {stateInfo.general}</h4>
-				<a href={stateInfo.url}>Go To Link</a>
+			<div className='stateInfoContainer'>
+			
+			<h4 className='stateInfoContainer'>Online registration deadline<br/>
+			{stateInfo.online}</h4>
+			
+			<h4 className='stateInfoContainer'>Mail-in registration deadline<br />
+			{stateInfo.mailIn}</h4>
+			
+			<h4 className='stateInfoContainer'>In-Person registration deadline<br />
+			{stateInfo.inPerson}</h4>
+			<h4 className='stateInfoContainer'>General Election Day<br />
+			{stateInfo.general}</h4>
+			
+			<button className='stateInfoButton' href={stateInfo.url}>REGISTER ONLINE</button>
 			</div>
 		);
 }
