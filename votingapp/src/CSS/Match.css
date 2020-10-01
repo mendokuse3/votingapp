@@ -1,0 +1,14 @@
+.matchPage{
+    display:flex;
+    flex-direction:column;
+
+}
+.top{
+    display:flex;
+    justify-content: space-between;
+
+}
+.match{
+    display:inline-block;
+    justify-content: center;
+}
