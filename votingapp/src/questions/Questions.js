@@ -118,7 +118,6 @@ class Questions extends React.Component {
 		})
 	}
 
-	// can create an array with all the questions and map through it, returning carousel.item's for cleaner code
 	render(){
     return (
 			<div>

@@ -6,7 +6,6 @@ import Register from './Register';
 import StateInfo from './StateInfo';
 import Home from './Home';
 import Dashboard from './Dashboard';
-import Match from './Match'
 
 class App extends Component {
   state = {
@@ -17,9 +16,7 @@ class App extends Component {
     showRegister: false,
     showCandidates: false,
     showDashboards: false,
-    // showMatch: false,
     selectedCandidate: '',
-    // match: ''
   }
 
   toggleState = (data) => {
@@ -63,13 +60,6 @@ class App extends Component {
       selectedCandidate: index
     })
   }
-
-  // goToMatch = () => {
-  //   this.setFalse();
-  //   this.setState({
-  //     showMatch: true
-  //   })
-  // }
 
   goToRegister = () => {
     this.setFalse();
