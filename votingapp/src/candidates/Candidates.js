@@ -1,11 +1,13 @@
 import React from 'react';
 import Candidate from './Candidate';
 import candidateData from '../data/candidateData';
+import Nav from '../navbar/Nav';
 
 
 function Candidates({selectedCandidate}) {
     return (
         <div>
+            <Nav/>
             {candidateData.map((cand, i) => {
                 if(selectedCandidate == i){
                     return (

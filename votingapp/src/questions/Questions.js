@@ -3,6 +3,7 @@ import {Carousel, Button } from 'react-bootstrap'
 import CarouselItem from './CarouselItem';
 import questions from '../data/questionsArray';
 import $ from 'jquery';
+import Nav from '../navbar/Nav';
 
 class Questions extends React.Component {
 	state = {
@@ -113,6 +114,7 @@ class Questions extends React.Component {
 	render(){
     return (
 			<div>
+				<Nav />
 				<div>
 					<Carousel interval={null} activeIndex={this.state.isActive}>
 						{questions.map((q, i) => {
