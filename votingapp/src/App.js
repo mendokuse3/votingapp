@@ -8,6 +8,7 @@ import Home from './Home';
 import Dashboard from './Dashboard';
 import Match from './Match';
 
+
 class App extends Component {
   state = {
     showState: false,
@@ -17,7 +18,9 @@ class App extends Component {
     showRegister: false,
     showCandidates: false,
     showDashboards: false,
+
     selectedCandidate: '',
+
   }
 
   toggleState = (data) => {
