@@ -9,3 +9,13 @@
    border: none;
  }
 
+.voter {
+  background: #4BBCC6;
+  height: 100vh;
+}
+
+h1 {
+  color: white;
+  font-family: 'bebas neue';
+  text-align: center;
+}

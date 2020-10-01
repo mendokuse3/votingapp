@@ -57,8 +57,9 @@ function Register(props) {
 		setData(data)
 	}
     return (
-			<div>
+			<div className='voter'>
 				<Nav goToDash={props.goToDash} goBack={props.goToDash}/>
+                <h1>Voter Information</h1>
 				<DropdownButton id="dropdown-basic-button" title={chosenState} >
 					{/* <Dropdown.Item href="#/action-1">Select Your State</Dropdown.Item> */}
 					{stateData.map((st, i) => {
