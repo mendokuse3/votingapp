@@ -12,30 +12,60 @@ class App extends Component {
   state = {
     showState: false,
     stateInfo: {},
-    showHome: false,
-    showQuestions: true,
-    showRegister: true,
+    showHome: true,
+    showQuestions: false,
+    showRegister: false,
     showCandidates: false,
     showDashboards: false
   }
 
   toggleState = (data) => {
-    console.log('from app')
-    console.log(data)
     this.setState({
       showState: true,
       stateInfo: data
     })
   }
 
+  setFalse = () => {
+    this.setState({
+      showHome: false,
+      showQuestions: false,
+      showRegister: false,
+      showCandidates: false,
+      showDashboards: false
+    })
+  }
+
+  componentDidMount(){
+    this.myVar = setTimeout(() => {
+      this.setFalse();
+      this.setState({
+        showDashboards: true
+      })
+    }, 5000)
+  }
+
+  goToDash = () => {
+    this.setFalse();
+    this.setState({
+      showDashboards: true
+    })
+    clearTimeout(this.myVar)
+  }
+
   render() {
     return (
       <div>
         {this.state.showHome &&
-        <Home/>
+        <Home goToDash={this.goToDash}/>
         }
         {this.state.showDashboards &&
+        <>
         <h1>I'm the dashboard</h1>
+        <button>Go To Questionaire</button>
+        <button>Go To Register to Vote</button>
+        <button>Go to Candidate Profiles</button>
+        </>
         }
         {this.state.showQuestions &&
         <Questions/>
