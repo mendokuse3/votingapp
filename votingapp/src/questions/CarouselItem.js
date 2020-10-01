@@ -25,6 +25,11 @@ function CarouselItem(props) {
         setMaybeBTN(true)
     }
 
+    const handleSubmit = () => {
+        props.goToMatch()
+        props.handleClick();
+    }
+
     return (
         <Carousel.Item className={props.isActive === props.index ? 'active' : ''} >
             <img
@@ -49,7 +54,7 @@ function CarouselItem(props) {
                     </ButtonGroup>
                 }
                 {!props.data.question && 
-                    <Button onClick={() => props.handleClick()}>Submit</Button>
+                    <Button onClick={() => handleSubmit()}>Submit</Button>
                 }
             </Carousel.Caption>
         </Carousel.Item>

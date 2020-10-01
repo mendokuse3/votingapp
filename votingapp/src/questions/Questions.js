@@ -4,6 +4,7 @@ import CarouselItem from './CarouselItem';
 import questions from '../data/questionsArray';
 import $ from 'jquery';
 import Nav from '../navbar/Nav';
+import Match from '../Match';
 
 class Questions extends React.Component {
 	state = {
@@ -15,6 +16,7 @@ class Questions extends React.Component {
 		isActive: 0,
 		submit: false,
 		matchScore:0,
+		showMatch: false
 	}
 	
 	setUserScore = (action) => {
@@ -110,20 +112,31 @@ class Questions extends React.Component {
 
 	}
 
+	goToMatch = () => {
+		this.setState({
+			showMatch: true
+		})
+	}
+
 	// can create an array with all the questions and map through it, returning carousel.item's for cleaner code
 	render(){
     return (
 			<div>
-				<Nav />
+				<Nav goToDash={this.props.goToDash}/>
+				{!this.state.showMatch &&
 				<div>
 					<Carousel interval={null} activeIndex={this.state.isActive}>
 						{questions.map((q, i) => {
 							return (
-								<CarouselItem data={q} key={i} isActive={this.state.isActive} index={i} setUserScore={this.setUserScore} userScore={this.state.userScore} handleClick={this.handleClick}/>
+								<CarouselItem data={q} key={i} isActive={this.state.isActive} index={i} setUserScore={this.setUserScore} userScore={this.state.userScore} handleClick={this.handleClick} goToMatch={this.goToMatch}/>
 							)
 						})}
 					</Carousel>
 				</div>
+				}
+				{this.state.showMatch && 
+				<Match/>
+				}
 			</div>
 		);
 	}
