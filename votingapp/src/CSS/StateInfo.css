@@ -1,0 +1,17 @@
+.stateInfoContainer,.stateInfoButton{
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    background-color:#4BBCC6 ;
+    color:white;
+}
+.stateInfoButton{
+    margin-top: 30px;
+    background-color: #042E66;
+    height:54px;
+    width:284px;
+    border:none;
+    border-radius: 15px;
+    font-size: 27px;
+    font-family: 'Bebas Neue';
+}
