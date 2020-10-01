@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import Questions from './questions/Questions';
 import Candidates from './candidates/Candidates';
-// import About from './About';
 import Register from './Register';
-import StateInfo from './StateInfo';
 import Home from './Home';
 import Dashboard from './Dashboard';
-import Match from './Match';
 
 
 class App extends Component {
   state = {
-    // showState: false,
-    // stateInfo: {},
     showHome: true,
     showQuestions: false,
     showRegister: false,
@@ -20,13 +15,6 @@ class App extends Component {
     showDashboards: false,
     selectedCandidate: '',
   }
-
-  // toggleState = (data) => {
-  //   this.setState({
-  //     showState: true,
-  //     stateInfo: data
-  //   })
-  // }
 
   setFalse = () => {
     this.setState({
@@ -87,13 +75,10 @@ class App extends Component {
         <Dashboard  setFalse={this.setFalse} goToDash={this.goToDash} goToCandidate={this.goToCandidate} goToMatch={this.goToMatch} goToRegister={this.goToRegister} goToQuestions={this.goToQuestions} />
         }
         {this.state.showQuestions &&
-        <Questions goToDash={this.goToDash} goToMatch={this.goToMatch} selectedCandidate={this.state.selectedCandidate}/>
+        <Questions goToDash={this.goToDash} goToMatch={this.goToMatch} goToCandidate={this.goToCandidate}/>
         }
         {this.state.showRegister &&
-        <>
         <Register toggleState={this.toggleState} goToDash={this.goToDash} />
-        {/* {this.state.showState && <StateInfo toggleState={this.toggleState} stateInfo={this.state.stateInfo} />} */}
-        </>
         }
         {this.state.showCandidates &&
         <Candidates selectedCandidate={this.state.selectedCandidate} goToDash={this.goToDash} />
