@@ -49,7 +49,7 @@ const CustomMenu = React.forwardRef(
 
 
 function Register(props) {
-	const [chosenState, setChosenState] = useState('Select Your State');
+	const [chosenState, setChosenState] = useState('Select State');
 	const [showState, setShowState] = useState(false)
 	const [data, setData] = useState({})
 	const passStateData = (data, e) => {
@@ -59,16 +59,28 @@ function Register(props) {
 	}
     return (
 			<div className='voter'>
-				<Nav goToDash={props.goToDash} goBack={props.goToDash}/>
-                <h1>Voter Information</h1>
-				<DropdownButton id="dropdown-basic-button" title={chosenState} >
+				<Nav goToDash={props.goToDash} goBack={props.goToDash} />
+				<h1 className='reg-header'>Voter Information</h1>
+				<DropdownButton
+					className='state-select'
+					variant='light'
+					id='dropdown-basic-button'
+					title={chosenState}>
 					{stateData.map((st, i) => {
 						return (
-							<Dropdown.Item key={i} onClick={(e) => passStateData(st, e)}>{st.name}</Dropdown.Item>
-						)
+							<Dropdown.Item
+								className='selector-text'
+								key={i}
+								onClick={(e) => passStateData(st, e)}>
+								{st.name}
+							</Dropdown.Item>
+						);
 					})}
 				</DropdownButton>
 				{showState && <StateInfo stateInfo={data} />}
+				<footer className='reg-img'>
+					<img src='https://user-images.githubusercontent.com/62581000/94859631-d5e60780-0402-11eb-90a9-4a537554964b.png' />
+				</footer>
 			</div>
 		);
 }

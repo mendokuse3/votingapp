@@ -14,8 +14,37 @@
   height: 100vh;
 }
 
-h1 {
+.reg-header {
   color: white;
   font-family: 'bebas neue';
   text-align: center;
+  padding-top: 60px;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+
+.state-select {
+  text-align: center;
+  padding: 5px;
+}
+
+#dropdown-basic-button {
+  width: 80%;
+  display: flex;
+  margin-left: 42px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  color: gray;
+  
+}
+
+.dropdown-menu {
+  width: 318px;
+  color: lightgray;
+}
+
+.reg-img {
+  margin-top: 380px;
+  margin-right: 35px;
 }
