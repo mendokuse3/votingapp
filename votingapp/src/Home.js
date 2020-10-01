@@ -3,7 +3,7 @@ import './CSS/Home.css'
 
 function Home(props) {
     return (
-        <div className='homeContainer'>
+        <div className='homeContainer' onClick={() => props.goToDash()}>
            <header className='topImg'/>
         {/* <img className='topImg' src='https://user-images.githubusercontent.com/65630204/94737059-327def80-033b-11eb-82ec-c5b6289cb0c0.png'/> */}
         <img className='trumpMainCandi' src='https://user-images.githubusercontent.com/65630204/94746267-5eed3800-034a-11eb-8806-08c7f0a30983.png'/>
