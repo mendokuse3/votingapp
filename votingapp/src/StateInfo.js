@@ -2,7 +2,6 @@ import React from 'react';
 import './CSS/StateInfo.css'
 
 function StateInfo({stateInfo}) {
-    console.log(stateInfo)
     return (
 			<div className='stateInfoContainer'>
 			
@@ -18,7 +17,13 @@ function StateInfo({stateInfo}) {
 			{stateInfo.general && <h4 className='stateInfoContainer'>General Election Day<br />
 			{stateInfo.general}</h4>} 
 			
-			<button className='stateInfoButton' href={stateInfo.url}>REGISTER ONLINE</button>
+			{/* <button className='stateInfoButton' href={stateInfo.url}>REGISTER ONLINE</button> */}
+			<form action={stateInfo.url}>
+                <button
+                    type='submit' className='stateInfoButton' >
+                    REGISTER ONLINE
+                </button>
+            </form>
 			</div>
 		);
 }
