@@ -1,0 +1,45 @@
+.candidatePage{
+    text-align: center;
+    color:#0057AF;
+}
+.profileImg{
+    margin-left: 10%;
+    width:68%;
+}
+.candidateName{
+    font-size: 24px;
+    font-weight: bold;
+    color:#002076
+}
+.candidateParty{
+    font-size: 24px;
+    color: #002076
+}
+.candidateBlurb{
+    font-size: 16px;
+    margin-bottom: none;
+    width:90%;
+    text-align: center;
+    margin:0 20px 10px 20px;
+}
+.candiMatchButton,.candiMainButton{
+    width: 320px;
+    height: 60px;
+    border: solid;
+    border-radius: 10px;
+}
+
+.candiMatchButton{
+    background-color: #4BBCC6;
+    border:none;
+    color:white;
+    margin-bottom: 10px;
+    font-size:24px;
+}
+.candiMainButton{
+    border-color:#4BBCC6;
+    border-width: 4px;
+    font-size:24px;
+    color:#4BBCC6;
+
+}
