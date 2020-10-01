@@ -1,6 +1,15 @@
+body,html{
+    height: 100%;
+    background-image: url('https://user-images.githubusercontent.com/65630204/94737748-5ee63b80-033c-11eb-804c-64c5d766c7f5.png');
+    background-position: -39px 691px;
+    background-repeat: no-repeat;
+    background-size: 507px;
+}
 .matchPage{
     display:flex;
     flex-direction:column;
+    height:100%;
+font-family: 'Avenir','Book';
 
 }
 .top{
@@ -9,6 +18,52 @@
 
 }
 .match{
-    display:inline-block;
-    justify-content: center;
+    width:100%;
+    
+    text-align: center;
+    margin-top: 25%;
+    font-size: 48px;
+    color:#1E336C;
+}
+.matchImg{
+    margin: 85px 45px 0 45px;
+}
+.percentDisplay{
+    color:white;
+    background-color: #379FA8;
+    height:100px;
+    width: 100px;
+    border-radius: 50%;
+    font-size: 36px;
+    padding: 23px 0;
+    text-align: center;
+    position: absolute;
+    top: 380px;
+    right: 80px;
+}
+.name{
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color:#003180;
+
+}
+.party{
+    width:100%;
+    text-align: center;
+    color:#002076;
+    font-size: 24px;
+    
+}
+.bottomProfileBtn{
+    width: 331px;
+    height: 63px;
+    margin:42px;
+    border-radius: 10px;
+    background-color: #379FA8;
+    color:white;
+    border: none;
+    font-size: 30px;
+
 }

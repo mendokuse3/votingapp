@@ -19,7 +19,7 @@ class App extends Component {
     showRegister: false,
     showCandidates: false,
     showDashboards: false,
-    showMatch: false,
+    showMatch: true,
     selectedCandidate: ''
   }
 
@@ -82,7 +82,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* {this.state.showHome &&
+        {this.state.showHome &&
         <Home goToDash={this.goToDash}/>
         }
         {this.state.showMatch && 
