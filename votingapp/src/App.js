@@ -89,7 +89,10 @@ class App extends Component {
         <Register toggleState={this.toggleState} goToDash={this.goToDash} />
         }
         {this.state.showCandidates &&
-        <Candidates goBackToMatch={this.goBackToMatch} alreadyMatched={this.state.alreadyMatched} selectedCandidate={this.state.selectedCandidate} goToDash={this.goToDash} />
+
+        <Candidates selectedCandidate={this.state.selectedCandidate} goToDash={this.goToDash} 
+        goToQuestions={this.goToQuestions}/>
+
         }
       </div>
     );
