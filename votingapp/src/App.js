@@ -7,8 +7,6 @@ import StateInfo from './StateInfo';
 import Home from './Home';
 import Dashboard from './Dashboard';
 
-// hello world
-
 class App extends Component {
   state = {
     showState: false,

@@ -1,4 +1,4 @@
-.match {
+/* .match {
     background-image: url('https://user-images.githubusercontent.com/62581000/94751369-6c102400-0356-11eb-81f0-d92e4ddfbd71.png');
     background-repeat: no-repeat;
 }
@@ -6,4 +6,64 @@
 .register {
     background-image: url('https://user-images.githubusercontent.com/62581000/94752695-f443f880-0359-11eb-9ddc-a8bd934e84f9.png');
     background-repeat: no-repeat;
+} */
+
+.profile-container {
+    background-color: pink;
+    text-align: center;
+}
+
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.candidate {
+    width: 49%;
+    text-align: center;
+}
+
+.candidate img {
+    width: 200px;
+}
+
+.match, .register {
+    width: 47%;
+    height: 25vh;
+    padding: 5%;
+}
+
+.match h2 {
+    font-size: 30px;
+    color: white
+}
+
+.match span {
+    color: black
+}
+
+.register h2 {
+    font-size: 30px;
+}
+.register span {
+    color: white
+}
+
+.match {
+    background-color: rgb(76, 142, 218);
+}
+
+.register {
+    background-color: rgb(84, 219, 197);
+}
+
+.headContainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}
+
+.match, .register, .profile-container {
+    border-radius: 15px;
 }
