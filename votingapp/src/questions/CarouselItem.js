@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Carousel, Button, ButtonGroup } from 'react-bootstrap';
+import '../CSS/Questions.css'
 
 function CarouselItem(props) {
     const [yesBTN, setYesBTN] = useState(false)
@@ -34,28 +35,31 @@ function CarouselItem(props) {
         <Carousel.Item className={props.isActive === props.index ? 'active' : ''} >
             <img
                 className='d-block w-100'
-                src='https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+                src='https://user-images.githubusercontent.com/65630204/94851346-518d8780-03f6-11eb-852b-294f787973ee.png'
                 alt='First slide'
             />
-            <Carousel.Caption>
-                <h3>{props.data.title}</h3>
-                <p>{props.data.question}</p>
+            <Carousel.Caption className='slide'>
+                <h3 className='question-title'>{props.data.title}</h3>
+                <p className='question-text'>{props.data.question}</p>
                 {props.data.question && 
                     <ButtonGroup>
-                        <Button onClick={handleClickYes} disabled={yesBTN ? true : false}>
-                            Yes
-                        </Button>
+                        <div className='choices'>
                         <Button onClick={handleClickNo} disabled={noBTN ? true : false}>
-                            No
+                            Disagree
                         </Button>
-                        <Button onClick={handleClickMaybe} disabled={maybeBTN ? true : false}>
-                            Maybe
+                        <Button onClick={handleClickYes} disabled={yesBTN ? true : false}>
+                            Agree
+                        </Button>
+                        </div>
+                        <Button className='maybe' onClick={handleClickMaybe} disabled={maybeBTN ? true : false}>
+                            I am not sure where I stand on this
                         </Button>
                     </ButtonGroup>
                 }
                 {!props.data.question && 
-                    <Button onClick={() => handleSubmit()}>Submit</Button>
+                    <Button className='submit-questions' onClick={() => handleSubmit()}>Submit</Button>
                 }
+                <img className='footer-image' src='https://user-images.githubusercontent.com/65630204/94857203-222f4880-03ff-11eb-8d5f-5568378c8d4f.png' alt='candy' />
             </Carousel.Caption>
         </Carousel.Item>
         

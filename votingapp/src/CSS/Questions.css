@@ -1,0 +1,75 @@
+.question-container {
+    background-image: url('https://user-images.githubusercontent.com/65630204/94851346-518d8780-03f6-11eb-852b-294f787973ee.png');
+}
+
+.question-nav {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-title, .question-text {
+    color: #042E67;
+    font-family: 'Bebas Neue'
+}
+
+.carousel-caption {
+    height: 85vh;
+    color: #042E67;
+    font-family: 'Bebas Neue';
+    /* font-weight: lighter; */
+}
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choices .btn {
+    width: 45%;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #042E67;
+}
+
+.maybe {
+    border-radius: 10px!important;
+    background-color: grey!important;
+    border-color: grey!important;
+    padding: 5% 10%!important;
+    font-size: 21px!important;
+    margin-top: 10%!important;
+}
+
+.footer-image {
+    position: absolute;
+    top: 576px;
+    left: -113px;
+}
+
+.slide h3 {
+    font-size: 55px;
+}
+
+.slide h3, .slide p {
+    margin-bottom: 10%;
+}
+
+.slide p {
+    font-size: 22px;
+}
+
+.submit-questions {
+    padding: 5%!important;
+    font-size: 25px!important;
+    border-radius: 10px!important;
+    background: radial-gradient(red, transparent);
+}
