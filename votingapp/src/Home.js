@@ -19,7 +19,7 @@ function Home(props) {
         
         
         {/* <img className='bottomImg' src='https://user-images.githubusercontent.com/65630204/94737748-5ee63b80-033c-11eb-804c-64c5d766c7f5.png'/> */}
-        <footer className='bottomImg'/>
+        {/* <footer className='bottomImg'/> */}
         </div>
     );
 }

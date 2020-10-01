@@ -42,21 +42,19 @@ class Questions extends React.Component {
          if(this.state.userScore>= this.penceScore && this.state.userScore< -9.75){
 			this.setState({userCandi: 'Pence'})
 			matchScore= Math.floor((this.state.userScore/penceScore)*100)
-			this.setState({matchScore:matchScore})
-			
+			this.setState({matchScore, candidateIndex: 1})
         } else if (this.state.userScore >= -9.75 && this.state.userScore < -1.5) {
 			this.setState({userCandi: 'Trump'})
 			matchScore= Math.floor((this.state.userScore/trumpScore)*100)
-			console.log(matchScore)
-			this.setState({matchScore:matchScore})
+			this.setState({matchScore, candidateIndex: 1})
         } else if (this.state.userScore>=-1.5 && this.state.userScore<8) {
 			this.setState({userCandi: 'Biden'})
 			matchScore= Math.floor((this.state.userScore/bidenScore)*100)
-			this.setState({matchScore:matchScore})
+			this.setState({matchScore, candidateIndex: 1})
         } else {
 			this.setState({userCandi: 'Harris'})
 			matchScore= Math.floor((this.state.userScore/harrisScore)*100)
-			this.setState({matchScore:matchScore})
+			this.setState({matchScore, candidateIndex: 1})
         }
 	}
 
@@ -140,7 +138,7 @@ class Questions extends React.Component {
 				</div>
 				}
 				{this.state.showMatch && 
-				<Match/>
+				<Match matchScore={this.state.matchScore} candidate={this.state.userCandi} />
 				}
 			</div>
 		);
