@@ -6,6 +6,7 @@ import Register from './Register';
 import StateInfo from './StateInfo';
 import Home from './Home';
 import Dashboard from './Dashboard';
+import Match from './Match'
 
 class App extends Component {
   state = {
@@ -15,7 +16,9 @@ class App extends Component {
     showQuestions: false,
     showRegister: false,
     showCandidates: false,
-    showDashboards: false
+    showDashboards: false,
+    showMatch: false,
+    selectedCandidate: ''
   }
 
   toggleState = (data) => {
@@ -52,14 +55,39 @@ class App extends Component {
     clearTimeout(this.myVar)
   }
 
+  goToCandidate = (index) => {
+    this.setFalse();
+    this.setState({
+      showCandidates: true,
+      selectedCandidate: index
+    })
+  }
+
+  goToMatch = () => {
+    this.setFalse();
+    this.setState({
+      showMatch: true
+    })
+  }
+
+  goToRegister = () => {
+    this.setFalse();
+    this.setState({
+      showRegister: true
+    })
+  }
+
   render() {
     return (
       <div>
         {this.state.showHome &&
         <Home goToDash={this.goToDash}/>
         }
+        {this.state.showMatch && 
+        <Match/>
+        }
         {this.state.showDashboards &&
-        <Dashboard />
+        <Dashboard  setFalse={this.setFalse} goToCandidate={this.goToCandidate} goToMatch={this.goToMatch} goToRegister={this.goToRegister}/>
         }
         {this.state.showQuestions &&
         <Questions/>
@@ -71,7 +99,7 @@ class App extends Component {
         </>
         }
         {this.state.showCandidates &&
-        <Candidates />
+        <Candidates selectedCandidate={this.state.selectedCandidate} />
         }
       </div>
     );
