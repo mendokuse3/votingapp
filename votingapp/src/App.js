@@ -11,8 +11,8 @@ import Match from './Match';
 
 class App extends Component {
   state = {
-    showState: false,
-    stateInfo: {},
+    // showState: false,
+    // stateInfo: {},
     showHome: true,
     showQuestions: false,
     showRegister: false,
@@ -21,12 +21,12 @@ class App extends Component {
     selectedCandidate: '',
   }
 
-  toggleState = (data) => {
-    this.setState({
-      showState: true,
-      stateInfo: data
-    })
-  }
+  // toggleState = (data) => {
+  //   this.setState({
+  //     showState: true,
+  //     stateInfo: data
+  //   })
+  // }
 
   setFalse = () => {
     this.setState({
@@ -92,7 +92,7 @@ class App extends Component {
         {this.state.showRegister &&
         <>
         <Register toggleState={this.toggleState} goToDash={this.goToDash} />
-        {this.state.showState && <StateInfo toggleState={this.toggleState} stateInfo={this.state.stateInfo} />}
+        {/* {this.state.showState && <StateInfo toggleState={this.toggleState} stateInfo={this.state.stateInfo} />} */}
         </>
         }
         {this.state.showCandidates &&

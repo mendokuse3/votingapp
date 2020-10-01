@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {DropdownButton, Dropdown, FormControl } from 'react-bootstrap';
 import stateData from './data/stateData';
-// import './CSS/Register.css'
+import './CSS/Register.css'
 import Nav from './navbar/Nav.js'
+import StateInfo from './StateInfo';
 
 
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
@@ -49,9 +50,11 @@ const CustomMenu = React.forwardRef(
 
 function Register(props) {
 	const [chosenState, setChosenState] = useState('Select Your State');
+	const [showState, setShowState] = useState(false)
+	const [data, setData] = useState({})
 	const passStateData = (data, e) => {
-		setChosenState(e.currentTarget.innerHTML)
-		props.toggleState(data);
+		setShowState(true)
+		setData(data)
 	}
     return (
 			<div>
@@ -64,6 +67,7 @@ function Register(props) {
 						)
 					})}
 				</DropdownButton>
+				{showState && <StateInfo stateInfo={data} />}
 			</div>
 		);
 }
