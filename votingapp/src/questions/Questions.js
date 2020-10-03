@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel, Button } from 'react-bootstrap'
+import {Carousel } from 'react-bootstrap'
 import CarouselItem from './CarouselItem';
 import questions from '../data/questionsArray';
 import $ from 'jquery';

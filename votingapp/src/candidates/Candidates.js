@@ -11,12 +11,12 @@ function Candidates({selectedCandidate, goToDash, alreadyMatched, goBackToMatch,
         <div>
             <Nav goToDash={goToDash} goBack={alreadyMatched ? goBackToMatch : goToDash} />
             {candidateData.map((cand, i) => {
-                if(selectedCandidate == i){
+                if(selectedCandidate === i){
                     return (
                     <Candidate goToQuestions={goToQuestions}key={i} data={cand} />
                     )
                 }
-                return
+                return <></>
             })}
         </div>
     );
